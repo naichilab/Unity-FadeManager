@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 
 /// <summary>
 /// シーン遷移時のフェードイン・アウトを制御するためのクラス
@@ -71,14 +70,12 @@ public class FadeManager : MonoBehaviour
 	
 		if (this.DebugMode && !this.isFading) {
 
-			//Scene一覧を取得
+			//Scene一覧を作成
+			//(UnityEditor名前空間を使わないと自動取得できなかったので決めうちで作成)
 			List<string> scenes = new List<string> ();
-			foreach (var guid in AssetDatabase.FindAssets("t:Scene")) {
-				var path = AssetDatabase.GUIDToAssetPath (guid);
-				scenes.Add (AssetDatabase.LoadMainAssetAtPath (path).name);
-			}
-			scenes.Sort ();
-
+			scenes.Add ("SampleScene");
+			//scenes.Add ("SomeScene1");
+			//scenes.Add ("SomeScene2");
 
 
 			//Sceneが一つもない
