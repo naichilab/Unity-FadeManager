@@ -9,7 +9,8 @@ Unity3Dにてフェードイン（アウト）を利用したシーン間遷移�
 # インストール
 1. ダウンロード -> [Download ZIP](https://github.com/naichilab/Unity-FadeManager/archive/master.zip)
 2. ダウンロードしたZIPファイルを解凍.
-3. *FadeManager.unitypackage* をUnity3Dプロジェクトにインポート  ![Import-Package](https://raw.githubusercontent.com/naichilab/Unity-FadeManager/gh-pages/import-unitypackage.png)
+3. *FadeManager.unitypackage* をUnity3Dプロジェクトにインポート  
+![Import-Package](https://raw.githubusercontent.com/naichilab/Unity-FadeManager/gh-pages/import-unitypackage.png)
 4. *naichilab/FadeManager/Prefabs/FadeManager* をシーンに配置  ![Placing-Prefab](https://raw.githubusercontent.com/naichilab/Unity-FadeManager/gh-pages/fademanager-placing.gif)
 
 # 設定
