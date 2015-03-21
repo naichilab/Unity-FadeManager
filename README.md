@@ -1,5 +1,7 @@
-# Unity-FadeManager
+﻿# Unity-FadeManager
 Make a Fade-In(Out) scene transition on Unity3D.
+
+[日本語版](https://github.com/naichilab/Unity-FadeManager/blob/master/README.ja.md)
 
 # Demo
 ![Demo - FadeManager](https://raw.githubusercontent.com/naichilab/Unity-FadeManager/gh-pages/fademanager-demo.gif)
