@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Linq;
 using System.Collections;
@@ -82,12 +83,12 @@ public class FadeManager : MonoBehaviour
 
 
 				GUI.Box (new Rect (10, 10, 300, 50 + scenes.Count * 25), "Fade Manager(Debug Mode)");
-				GUI.Label (new Rect (20, 30, 280, 20), "Current Scene : " + Application.loadedLevelName);
+				GUI.Label (new Rect (20, 30, 280, 20), "Current Scene : " + SceneManager.GetActiveScene ().name);
 
 				int i = 0;
 				foreach (string sceneName in scenes) {
 					if (GUI.Button (new Rect (20, 55 + i * 25, 100, 20), "Load Level")) {
-						LoadLevel (sceneName, 1.0f);
+						LoadScene (sceneName, 1.0f);
 					}
 					GUI.Label (new Rect (125, 55 + i * 25, 1000, 20), sceneName);
 					i++;
@@ -104,7 +105,7 @@ public class FadeManager : MonoBehaviour
 	/// </summary>
 	/// <param name='scene'>シーン名</param>
 	/// <param name='interval'>暗転にかかる時間(秒)</param>
-	public void LoadLevel (string scene, float interval)
+	public void LoadScene (string scene, float interval)
 	{
 		StartCoroutine (TransScene (scene, interval));
 	}
@@ -126,8 +127,8 @@ public class FadeManager : MonoBehaviour
 		}
 		
 		//シーン切替 .
-		Application.LoadLevel (scene);
-		
+		SceneManager.LoadScene (scene);
+
 		//だんだん明るく .
 		time = 0;
 		while (time <= interval) {
