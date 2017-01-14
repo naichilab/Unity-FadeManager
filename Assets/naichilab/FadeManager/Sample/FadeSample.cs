@@ -6,6 +6,6 @@ public class FadeSample : MonoBehaviour
 
 	public void FadeScene ()
 	{
-		FadeManager.Instance.LoadLevel ("Scene1", 2.0f);
+		FadeManager.Instance.LoadScene ("Scene1", 2.0f);
 	}
 }
